@@ -21,6 +21,17 @@ export default function DocumentGeneratorPage() {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
+    
+    if (name === 'clientIndustry') {
+      if (value === 'beauty_skincare' || value === 'health_diet') {
+        setData(prev => ({ ...prev, [name]: value, campaignGoal: '광고' }));
+        return;
+      } else if (value === 'prof_medical' || value === 'prof_law' || value === 'prof_tax') {
+        setData(prev => ({ ...prev, [name]: value, campaignGoal: '브랜딩_고객문의' }));
+        return;
+      }
+    }
+
     let finalValue: string | number = value;
 
     if (name === 'unitPrice' || name === 'contractMonths') {
@@ -208,25 +219,14 @@ export default function DocumentGeneratorPage() {
                   onChange={handleChange}
                   style={{ background: 'white' }}
                 >
-                  <optgroup label="뷰티 / 패션 / 커머스">
+                  <optgroup label="뷰티 / 커머스">
                     <option value="beauty_skincare">뷰티 / 스킨케어</option>
-                    <option value="fashion_apparel">패션 / 의류 브랜드</option>
                     <option value="health_diet">건강기능식품 / 다이어트</option>
                   </optgroup>
                   <optgroup label="고관여 / 전문직">
                     <option value="prof_medical">병의원 / 성형외과 / 피부과</option>
                     <option value="prof_law">법무법인 / 변호사</option>
                     <option value="prof_tax">세무 / 회계 / 노무법인</option>
-                  </optgroup>
-                  <optgroup label="오프라인 / 로컬 비즈니스">
-                    <option value="local_food">요식업 / 카페 / 프랜차이즈</option>
-                    <option value="local_beauty">헤어 / 네일 / 에스테틱샵</option>
-                    <option value="local_gym">피트니스 / 필라테스 / PT샵</option>
-                  </optgroup>
-                  <optgroup label="교육 / IT / B2B">
-                    <option value="academy_student">입시 / 보습 / 예체능 학원</option>
-                    <option value="academy_adult">성인 교육 / 자격증 / 어학원</option>
-                    <option value="b2b_startup">스타트업 / IT플랫폼 / B2B</option>
                   </optgroup>
                 </select>
               </div>
@@ -243,6 +243,7 @@ export default function DocumentGeneratorPage() {
                   <option value="인지도">인지도 (바이럴 확산)</option>
                   <option value="고객문의">고객문의 (DB 수집)</option>
                   <option value="매출상승">매출상승 (CVR 극대화)</option>
+                  <option value="브랜딩_고객문의">브랜딩 및 고객문의 (DB 수집)</option>
                 </select>
               </div>
               <div className="form-group">

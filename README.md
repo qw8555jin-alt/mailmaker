@@ -1,36 +1,23 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mailmaker (메일메이커)
 
-## Getting Started
+원피드마케팅의 B2B 영업 및 마케팅을 위한 맞춤형 문서 자동 생성기입니다. 
+견적서, 제안서, 계약서, 그리고 고도로 개인화된 타겟 맞춤형 콜드메일 본문을 단 몇 초 만에 자동으로 생성할 수 있습니다.
 
-First, run the development server:
+## 주요 기능
+- **견적/제안서 생성:** 클라이언트 정보와 서비스 내역을 바탕으로 깔끔한 양식의 제안서를 생성합니다.
+- **계약서 생성:** 법적 필수 조항과 서명이 포함된 전자 계약서 포맷을 제공합니다.
+- **콜드메일 자동 작성:** 타겟 업종(뷰티, 건기식, 병의원, 법무법인, 세무회계 등)에 맞춰 제목과 성과 지표가 완벽하게 커스터마이징된 콜드메일 템플릿을 생성합니다.
+- **PDF 저장 및 인쇄:** 생성된 모든 문서를 원클릭으로 PDF 저장 및 인쇄할 수 있습니다.
 
+## 기술 스택
+- Next.js (App Router)
+- React
+- Tailwind CSS
+
+## 실행 방법
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+브라우저에서 [http://localhost:3000](http://localhost:3000) 으로 접속하여 사용할 수 있습니다.

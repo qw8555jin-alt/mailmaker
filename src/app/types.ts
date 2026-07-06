@@ -34,8 +34,8 @@ export interface DocData {
   proposalMethod: string;
   
   // Cold Email specific
-  clientIndustry: 'beauty_skincare' | 'fashion_apparel' | 'health_diet' | 'prof_medical' | 'prof_law' | 'prof_tax' | 'local_food' | 'local_beauty' | 'local_gym' | 'academy_student' | 'academy_adult' | 'b2b_startup';
-  campaignGoal: '광고' | '브랜딩' | '인지도' | '고객문의' | '매출상승';
+  clientIndustry: 'beauty_skincare' | 'health_diet' | 'prof_medical' | 'prof_law' | 'prof_tax';
+  campaignGoal: '광고' | '브랜딩' | '인지도' | '고객문의' | '매출상승' | '브랜딩_고객문의';
   clientProduct: string;
   portfolioLink: string;
 }
@@ -51,10 +51,10 @@ export const defaultDocData: DocData = {
   providerRep: '권용진',
   providerBizNum: '234-39-01465',
   providerContact: '010-3796-9592',
-  serviceName: '브랜딩 숏폼 (기획+편집+썸네일)',
+  serviceName: '브랜딩 숏폼 (기획+촬영+편집+썸네일)',
   unitPrice: 500000,
   quantity: '월 4건 (주1회)',
-  includedServices: '콘텐츠 기획\n숏폼 영상 편집\n썸네일 제작\n주 1회 납품 (월 4건)\n브랜드 톤앤매너에 맞춘 제작',
+  includedServices: '콘텐츠 기획\n촬영 진행\n숏폼 영상 편집\n썸네일 제작\n주 1회 납품 (월 4건)\n브랜드 톤앤매너에 맞춘 제작',
   notes: '', // 기본 안내사항은 고정되어 있으며, 여기에는 추가 안내사항만 입력합니다.
   contractStartDate: '2026-07-02',
   contractMonths: 1,
@@ -66,5 +66,5 @@ export const defaultDocData: DocData = {
   clientIndustry: 'beauty_skincare',
   campaignGoal: '매출상승',
   clientProduct: '콜라겐 라인',
-  portfolioLink: 'https://example.com/portfolio'
+  portfolioLink: 'https://m.site.naver.com/2bYVa'
 };
